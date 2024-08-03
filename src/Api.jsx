@@ -83,12 +83,6 @@ export function PHOTO_GET(id) {
   };
 }
 
-export function SINGLE_PHOTO_GET(id) {
-  return {
-    url: `${API_URL}/api/photo/${id}`,
-  }
-}
-
 export function COMMENT_POST(id, body) {
   return {
     url: `${API_URL}/api/comment/${id}`,
@@ -98,7 +92,7 @@ export function COMMENT_POST(id, body) {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + window.localStorage.getItem('token'),
       },
-      body: JSON.stringify(body)
+      body: JSON.stringify(body),
     },
   };
 }
@@ -117,38 +111,38 @@ export function PHOTO_DELETE(id) {
 
 export function PASSWORD_LOST(body) {
   return {
-    url : API_URL + '/api/password/lost',
+    url: API_URL + '/api/password/lost',
     options: {
       method: 'POST',
       headers: {
-        'Content-type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(body)
-    }
-  }
+      body: JSON.stringify(body),
+    },
+  };
 }
 
 export function PASSWORD_RESET(body) {
   return {
-    url : API_URL + '/api/password/reset',
+    url: API_URL + '/api/password/reset',
     options: {
       method: 'POST',
       headers: {
-        'Content-type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(body)
-    }
-  }
+      body: JSON.stringify(body),
+    },
+  };
 }
 
 export function STATS_GET() {
   return {
-    url : API_URL + '/api/stats',
+    url: API_URL + '/api/stats',
     options: {
       method: 'GET',
       headers: {
-        Authorization: 'Bearer ' + window.localStorage.getItem('token')
-      }
-    }
-  }
+        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+      },
+    },
+  };
 }

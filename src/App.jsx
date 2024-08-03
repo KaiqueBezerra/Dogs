@@ -7,18 +7,18 @@ import Home from './Components/Home';
 import Login from './Components/Login/Login';
 import { UserStorage } from './UserContext';
 import User from './Components/User/User';
-import Photo from './Components/Photo/Photo'
 import ProtectedRoute from './Components/Helper/ProtectedRoute';
+import Photo from './Components/Photo/Photo';
 import UserProfile from './Components/User/UserProfile';
 import NotFound from './Components/NotFound';
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <BrowserRouter>
         <UserStorage>
           <Header />
-          <main className='AppBody'>
+          <main className="AppBody">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="login/*" element={<Login />} />
